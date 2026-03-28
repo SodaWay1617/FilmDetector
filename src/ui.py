@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import gradio as gr
 
@@ -29,9 +29,9 @@ def create_ui() -> gr.Blocks:
                 analyze_button = gr.Button("Analyze image", elem_id="analyze-btn")
                 result_output = gr.Textbox(
                     label="Prediction result",
-                    lines=6,
+                    lines=1,
                     interactive=False,
-                    placeholder="Top-3 predictions will appear here.",
+                    placeholder="The best match will appear here.",
                 )
 
                 analyze_button.click(

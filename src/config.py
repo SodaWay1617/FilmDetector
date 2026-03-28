@@ -1,9 +1,9 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import os
 
 MODEL_NAME = "callmealina/ViT_based_movie_identification_by_frame_lr1e-4_3epochs"
-TOP_K = int(os.getenv("TOP_K", "3"))
+TOP_K = int(os.getenv("TOP_K", "1"))
 HOST = os.getenv("HOST", "127.0.0.1")
 PORT = int(os.getenv("PORT", "7860"))
 INBROWSER = os.getenv("INBROWSER", "true").lower() == "true"

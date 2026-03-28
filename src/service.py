@@ -1,14 +1,14 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 from PIL.Image import Image
 
 from src.config import ERROR_INFERENCE, ERROR_MODEL_LOAD, ERROR_NO_IMAGE, TOP_K
 from src.model import ModelLoadError, predict
-from src.utils import format_predictions
+from src.utils import extract_top_label
 
 
 def analyze_image(image: Image | None) -> str:
-    """Validate input, run inference, and format the top-k result."""
+    """Validate input, run inference, and format the best result."""
     if image is None:
         return ERROR_NO_IMAGE
 
@@ -19,4 +19,4 @@ def analyze_image(image: Image | None) -> str:
     except Exception:
         return ERROR_INFERENCE
 
-    return format_predictions(predictions[:TOP_K])
+    return extract_top_label(predictions)
