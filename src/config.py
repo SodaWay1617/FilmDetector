@@ -10,7 +10,7 @@ INBROWSER = os.getenv("INBROWSER", "true").lower() == "true"
 
 APP_TITLE = "FilmDetector MVP"
 APP_DESCRIPTION = (
-    "Upload an image, run Hugging Face classification, and review the top-3 predictions."
+    "Upload an image, run classification, and get film prediction!"
 )
 APP_CSS = """
 :root {
